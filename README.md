@@ -8,9 +8,9 @@ A 30-second illustrated short (1920×1080, 30 fps, no audio). A small hooded tra
 
 | Scene | Time | What happens |
 |---|---|---|
-| **Opening**: Dawn | 0–11s | Fade in from black. The camera starts on a starry sky and cranes down to the forest while the title *The Lantern Path* appears. The traveller walks in, and the camera starts following. |
-| **Middle**: The deep forest | 10–22s | Golden god rays, drifting fog, dust motes and falling leaves. The camera tracks the traveller and slowly pushes in. They stop to look up at the light, then walk on. |
-| **Ending**: Twilight clearing | 21–30s | The traveller reaches an ancient tree and stops. They raise the lantern and the tree lights up. Sparks rise, the camera pulls back, and the film fades out on *The End*. |
+| **Opening**: Dawn | 0–10s | Fade in from black. The camera starts on a starry sky and cranes down to the forest while the title *The Lantern Path* appears. The traveller walks in, and the camera starts following. |
+| **Middle**: The deep forest | 9–21s | Golden god rays, drifting fog, dust motes and falling leaves. The camera tracks the traveller and slowly pushes in. They stop to look up at the light, then walk on. |
+| **Ending**: Twilight clearing | 20–30s | The traveller reaches an ancient tree and stops. They raise the lantern and the tree lights up. Sparks rise, the camera pulls back, and the film fades out on *The End*. |
 
 Scenes are joined with smooth transitions: a custom glow dissolve, then a crossfade.
 

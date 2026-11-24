@@ -21,23 +21,23 @@ export const EndingScene: React.FC = () => {
   const frame = useCurrentFrame();
   const palette = TWILIGHT;
 
-  // --- Character walks in and comes to a gentle stop -----------------------
-  const speed = (f: number) => tween(f, [70, 140], [5, 0]);
+  // --- Character walks in from off-screen (after the dissolve) and stops ----
+  const speed = (f: number) => tween(f, [150, 195], [6, 0]);
   const walked = distanceAt(frame, speed);
   const stride = speed(frame) / 5;
-  const lookUp = tween(frame, [135, 175], [0, 1]);
+  const lookUp = tween(frame, [185, 225], [0, 1]);
 
-  // Camera moves at 60% of walking speed, so the traveller walks *into* the frame.
-  const cameraX = walked * 0.6;
-  const charScreenX = 420 + walked * 0.4;
+  // The camera drifts at 20% of walking speed, so the traveller walks *into* the frame.
+  const cameraX = walked * 0.2;
+  const charScreenX = -220 + walked * 0.8;
 
-  // --- The heart tree stands in the world at x = 1300 ------------------------
-  // (World x = screen x + cameraX. The traveller stops ~350px before the trunk.)
-  const treeScreenX = 1300 - cameraX;
-  const awaken = tween(frame, [140, 210], [0.25, 1]);
+  // --- The heart tree stands in the world at x = 1240 ------------------------
+  // (World x = screen x + cameraX. The traveller stops ~420px before the trunk.)
+  const treeScreenX = 1240 - cameraX;
+  const awaken = tween(frame, [190, 255], [0.25, 1]);
 
   // --- Camera pulls back as the tree lights up -----------------------------
-  const zoom = tween(frame, [0, 120], [1.18, 1.12]) - tween(frame, [130, 260], [0, 0.12]);
+  const zoom = tween(frame, [0, 140], [1.18, 1.12]) - tween(frame, [150, 290], [0, 0.12]);
 
   return (
     <AbsoluteFill style={{ background: "#000" }}>
@@ -92,11 +92,11 @@ export const EndingScene: React.FC = () => {
         </ForestWorld>
       </Camera>
 
-      <Caption text="Some lights are found only by those who keep walking." from={150} to={232} size={50} align="bottom" />
-      <Caption text="The End" from={222} to={300} size={96} fadeFrames={20} />
+      <Caption text="Some lights are found only by those who keep walking." from={200} to={262} size={50} align="bottom" />
+      <Caption text="The End" from={252} to={330} size={96} fadeFrames={20} />
 
-      <CinematicOverlay grade={palette.grade} gradeOpacity={palette.gradeOpacity} vignette={0.65} letterbox={tween(frame, [150, 260], [70, 120])} />
-      <FadeFromBlack from={245} to={270} reverse />
+      <CinematicOverlay grade={palette.grade} gradeOpacity={palette.gradeOpacity} vignette={0.65} letterbox={tween(frame, [170, 290], [70, 120])} />
+      <FadeFromBlack from={275} to={300} reverse />
     </AbsoluteFill>
   );
 };

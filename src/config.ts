@@ -21,9 +21,9 @@ export const TRANSITION_FRAMES = 30;
  * sum(scenes) - TRANSITION_FRAMES * (number of scenes - 1).
  */
 export const SCENE_FRAMES = {
-  opening: 330,
+  opening: 300,
   journey: 360,
-  ending: 270,
+  ending: 300,
 } as const;
 
 export const TOTAL_FRAMES =

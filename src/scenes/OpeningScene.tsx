@@ -38,7 +38,7 @@ export const OpeningScene: React.FC = () => {
   const panY = tween(frame, [0, 200], [-220, 0]); // start tilted up at the sky
 
   // --- Light: the sun rises during the shot ---------------------------------
-  const sunY = tween(frame, [0, 330], [660, 500]);
+  const sunY = tween(frame, [0, 300], [660, 500]);
 
   return (
     <AbsoluteFill style={{ background: "#000" }}>
