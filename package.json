@@ -1,0 +1,28 @@
+{
+  "name": "story-telling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "2D cinematic storytelling animations built with Remotion and React",
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "render": "remotion render ForestStory out/forest-story.mp4",
+    "render:preview": "remotion render ForestStory out/forest-story-preview.mp4 --scale=0.5",
+    "still": "remotion still ForestStory out/still.png --frame=450",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@remotion/cli": "^4.0.546",
+    "@remotion/transitions": "^4.0.546",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.546"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "typescript": "^5.9.3"
+  }
+}
