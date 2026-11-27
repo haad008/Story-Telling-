@@ -1,6 +1,6 @@
 ---
 name: zack-d-film
-description: Use when the user wants a short-form vertical video script (YouTube Shorts, TikTok, Reels) in the style of fast 3D-animated explainers — "what happens if…", "how does X work", "why you should never…" — with a hard hook, second-person POV, a visual beat sheet for the animator, and narration timed to 30–60 seconds. Triggers on "zack-d-film", "zack d film style", "3D explainer short", "shorts script", "what happens to your body if".
+description: Use when the user wants a short-form vertical video script (YouTube Shorts, TikTok, Reels) in the style of fast 3D-animated explainers — "what happens if…", "how does X work", "why you should never…" — with a hard hook, second-person POV, a visual beat sheet for the animator, and narration timed to 30–60 seconds. Triggers on "zack-d-film", "zack d film style", "3D explainer short", "shorts script", "what happens to your body if", "Persian shorts script", "فیلم‌نامه کوتاه", "ویدیو کوتاه".
 ---
 
 # Zack-D-Film Style Short Script
@@ -19,7 +19,17 @@ or catchphrases.
 Ask only if missing and not inferable:
 - **Topic** (required). If the user gives only a theme, propose 3 hook angles and pick the strongest unless they want to choose.
 - **Length**: default 45 s (~110–130 spoken words). 30 s ≈ 75–85 words, 60 s ≈ 150–165 words.
-- **Language**: default English. If the user writes in another language (e.g. Hebrew), write narration in that language and keep beat notes in the same language unless told otherwise.
+- **Language**: default **Persian (Farsi)**. Write everything the user sees (title, narration, on-screen text, visual notes, fact-check, alt hooks, section headings) in Persian. Switch to another language only if the user asks.
+
+## Persian writing rules
+
+- Narration is **spoken, informal Persian (محاوره‌ای)**: «می‌افته»، «اگه»، «یه»، «نمی‌دونی». It must sound natural read aloud by a voice actor. Avoid stiff written/literary Persian.
+- On-screen text and the title may be standard written Persian (کتابی), short and clear.
+- Use correct half-spaces (نیم‌فاصله, U+200C): «می‌شه»، «خونه‌ها»، «نمی‌دونی».
+- Use Persian digits (۰–۹) in narration and on-screen text; keep timecodes (0:00–0:02) in Latin digits so editors can read them.
+- Use Persian punctuation: «،» «؛» «؟» and guillemets « ».
+- Prefer common Persian words over Arabic-heavy or English loanwords; keep scientific terms the audience knows (e.g. «معده»، «اسید»، «سلول»).
+- Word counts: Persian narration runs at about 2.3–2.6 words per second. 30 s ≈ 70–80 words, 45 s ≈ 105–120 words, 60 s ≈ 140–155 words.
 
 ## Core rules
 
@@ -28,6 +38,12 @@ Ask only if missing and not inferable:
    - "If you ever ___, never ___."
    - "This man ___ — and here's why he survived."
    - "Here's why ___ is actually ___."
+
+   Persian equivalents (preferred):
+   - «این اتفاقیه که برای بدنت می‌افته اگه ___.»
+   - «اگه یه روز ___، هیچ‌وقت ___.»
+   - «این مرد ___ — و این دلیلیه که زنده موند.»
+   - «می‌دونستی ___ در واقع ___؟»
 2. **Second person, present tense.** "You swallow the gum. It slides down your esophagus…" The viewer *is* the character.
 3. **One idea per shot, one shot every 1.5–3 s.** Each narration sentence maps to one visual. No sentence longer than ~14 words.
 4. **Show the inside.** The signature visual move is the cutaway: x-ray, cross-section, zoom into organs/cells/mechanisms. Use at least two.
@@ -48,31 +64,33 @@ Ask only if missing and not inferable:
 
 ## Output format
 
+Write the whole output in Persian (headings included):
+
 ```
-# <Title — 6 words max, curiosity-driven>
+# <عنوان — حداکثر ۶ کلمه، کنجکاوی‌برانگیز>
 
-**Length:** ~45 s · **Words:** <n> · **Hook angle:** <one line>
+**مدت:** ~۴۵ ثانیه · **تعداد کلمات:** <n> · **زاویهٔ قلاب:** <یک خط>
 
-## Script
+## فیلم‌نامه
 
-| # | Time | Visual (for animator) | Narration | SFX / Music |
-|---|------|------------------------|-----------|-------------|
-| 1 | 0:00–0:02 | Close-up: ... | "..." | Bass hit |
-| 2 | ... | ... | "..." | ... |
+| # | زمان | تصویر (برای انیمیتور) | گوینده | افکت صوتی / موسیقی |
+|---|------|------------------------|--------|---------------------|
+| ۱ | 0:00–0:02 | نمای خیلی نزدیک: ... | «...» | ضربهٔ بیس |
+| ۲ | ... | ... | «...» | ... |
 
-## Narration only (for voiceover)
-<all narration lines in order, one per line>
+## متن گوینده (برای ضبط صدا)
+<همهٔ جمله‌های گوینده به ترتیب، هر جمله در یک خط>
 
-## On-screen text
-<1–3 short overlays, if any>
+## متن روی تصویر
+<۱ تا ۳ نوشتهٔ کوتاه، در صورت نیاز>
 
-## Fact check
-- <claim> — <what to verify>
+## بررسی صحت اطلاعات
+- <ادعا> — <چه چیزی باید بررسی شود>
 
-## Alt hooks
-1. ...
-2. ...
-3. ...
+## قلاب‌های جایگزین
+۱. ...
+۲. ...
+۳. ...
 ```
 
 ## Visual vocabulary (use in the Visual column)
@@ -84,6 +102,7 @@ Ask only if missing and not inferable:
 
 ## Quality checklist (run before replying)
 
+- [ ] Everything is in natural Persian; narration is conversational, half-spaces are correct
 - [ ] Hook is under 12 words and lands before 2 s
 - [ ] Word count matches target length (±10%)
 - [ ] Every narration line has its own visual
